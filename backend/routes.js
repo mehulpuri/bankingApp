@@ -44,6 +44,7 @@ app.post("/transfer", async (req, res) => {
   var amount = Number(amountValue);
 
   const sender = await customerModel.findById(senderId);
+
   const receiver = await customerModel.findById(receiverId);
 
   const newSenderBalance = sender?.balance - amount;
@@ -65,11 +66,17 @@ app.post("/transfer", async (req, res) => {
   const transfer = new transferModel(transferObject);
 
   try {
-    customerModel.findByIdAndUpdate(senderId, {
-      balance: newSenderBalance,
-    });
-
     await transfer.save();
+
+    customerModel.findByIdAndUpdate(
+      senderId,
+      {
+        balance: newSenderBalance,
+      },
+      () => {
+        console.log("sender stuff done");
+      }
+    );
 
     customerModel.findByIdAndUpdate(
       receiverId,
@@ -81,7 +88,7 @@ app.post("/transfer", async (req, res) => {
       }
     );
   } catch (error) {
-    res.status(500).send(error);
+    res.status(500).send(error + " fuck");
   }
 });
 
