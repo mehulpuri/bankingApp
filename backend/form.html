@@ -1,0 +1,93 @@
+<section class="h-auto px-12 pb-12">
+    <p
+      class="pb-5 mb-5 text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-blue-100"
+    >
+      Register Student Information
+    </p>
+    <div class="grid grid-cols-2">
+      <form method="POST" action="/add" class="col-span-1">
+        
+          <div class="col-span-1 mb-5">
+            <label
+              for="first-name"
+              class="block mb-3 text-base font-medium"
+            >
+              Full Name
+            </label>
+            <input type="text" name="name" placeholder="First Name" />
+          </div>
+         
+         
+          <div class="col-span-1 mb-5">
+            <label
+              for="gender"
+              class="block mb-3 text-base font-medium"
+            >
+              Gender
+            </label>
+            <select name="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="col-span-1 mb-5">
+            <label
+              for="dob"
+              class="block mb-3 text-base font-medium"
+            >
+              Date Of Birth
+            </label>
+            <input name="dob" type="date" placeholder="Date Of Birth" />
+          </div>
+
+          <div class="col-span-1 mb-5">
+            <label
+              for="email"
+              class="block mb-3 text-base font-medium"
+            >
+              Email
+            </label>
+            <input
+              name="email"
+              type="email"
+              placeholder="example@domain.com"
+            />
+          </div>
+
+          
+          
+          <div class="col-span-1 mb-5">
+            <label
+              for="mobile-text"
+              class="block mb-3 text-base font-medium"
+            >
+              Mobile
+            </label>
+            <input
+              name="mobile"
+              type="tel"
+              pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$"
+              placeholder="Mobile"
+              required=""
+            />
+          </div>
+
+          <div>
+            <label for ="balance">Balance</label>
+            <input type="number" name="balance" placeholder="balance" />
+          </div>
+          <div class="col-span-2">
+            <button
+              type="submit"
+              class="px-10 primary-btn disabled:bg-gray-400"
+            >Submit</button>
+          </div>
+        </div>
+      </form>
+      <div class="col-span-1">
+       
+      </div>
+    </div>
+  </section>
