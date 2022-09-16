@@ -53,29 +53,23 @@ const navbar = () => {
             <div className="space-y-1 px-10 pt-2 pb-3">
               {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
               <a
-                href="#"
+                href="/"
                 className="bg-gray-900 text-white block mr-10 px-5 py-10 rounded-md text-base font-medium"
                 aria-current="page"
               >
-                Dashboard
+                Home
               </a>
               <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-10 py-2 rounded-md text-base font-medium"
+                href="/customers"
+                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-2 py-2 rounded-md text-base font-medium"
               >
-                Team
+                Customers
               </a>
               <a
-                href="#"
+                href="/history"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-22 py-2 rounded-md text-base font-medium"
               >
-                Projects
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-6 py-2 rounded-md text-base font-medium"
-              >
-                Calendar
+                Transfer History
               </a>
             </div>
           </div>
